@@ -1,32 +1,32 @@
-name: Clone Private Repository Workflow
+# name: Clone Private Repository Workflow
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+# # Controls when the workflow will run
+# on:
+#   # Triggers the workflow on push or pull request events but only for the "main" branch
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
     
-jobs:
+# jobs:
     
-  job-public-repo-ubuntu:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout the code
-        uses: actions/checkout@v3
+#   job-public-repo-ubuntu:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: checkout the code
+#         uses: actions/checkout@v3
       
-      - name: Clone Rajat71g/idl-copy PRIVATE repository
-        uses: GuillaumeFalourd/clone-github-repo-action@v2
-        with:
-          owner: 'rajat71g'
-          repository: 'idl-copy'
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+#       - name: Clone Rajat71g/idl-copy PRIVATE repository
+#         uses: GuillaumeFalourd/clone-github-repo-action@v2
+#         with:
+#           owner: 'rajat71g'
+#           repository: 'idl-copy'
+#           access-token: ${{ secrets.ACCESS_TOKEN }}
       
-      - name: Access cloned repository content
-        run: |
-          echo "ROOT"
-          ls -la
-          echo "CLONED REPO"
-          cd idl-copy
-          ls -la
+#       - name: Access cloned repository content
+#         run: |
+#           echo "ROOT"
+#           ls -la
+#           echo "CLONED REPO"
+#           cd idl-copy
+#           ls -la

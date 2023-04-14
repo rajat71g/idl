@@ -1,0 +1,10 @@
+      - name: Push generated webpage to another repository
+        uses: nkoppel/push-files-to-another-repository@1.1.0
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
+        with:
+          source-files: '*'
+          destination-username: 'rajat71g'
+          destination-repository: 'idl-copy'
+          destination-directory: 'test/idl'
+          commit-email: 'rajat71g@gmail.com'
