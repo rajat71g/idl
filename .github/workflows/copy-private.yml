@@ -21,7 +21,7 @@ jobs:
         with:
           owner: 'rajat71g'
           repository: 'idl-copy'
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+          access-token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Access cloned repository content
         run: |
