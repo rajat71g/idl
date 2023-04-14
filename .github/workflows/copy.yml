@@ -1,4 +1,4 @@
-name: Clone Private Repository Workflow
+name: Clone Public Repository Workflow
 
 # Controls when the workflow will run
 on:
@@ -15,7 +15,7 @@ jobs:
     steps:
       
       - name: Clone rajat71g/idl-test PUBLIC repository
-        uses: rajat71g/clone-github-repo-action@v2
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
         with:
           owner: 'Rajat Gupta'
           repository: 'idl-test'
