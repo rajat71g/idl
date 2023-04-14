@@ -1,4 +1,4 @@
-name: Clone Public Repository Workflow
+name: Clone Private Repository Workflow
 
 # Controls when the workflow will run
 on:
