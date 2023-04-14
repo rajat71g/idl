@@ -12,13 +12,16 @@ jobs:
     
   clone-copy-to-idl-copy:
     runs-on: ubuntu-latest
-    steps:     
+    steps:  
+      - name: Checkout idl copies
+        uses: actions/checkout@v3
+
       - name: Push generated webpage to another repository
         uses: nkoppel/push-files-to-another-repository@v1.1.0
         env:
           API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
         with:
-          # source-files: '*'
+          source-files: 'src/java/'
           destination-username: 'rajat71g'
           destination-repository: 'idl-copy'
           destination-directory: 'test/idl'
