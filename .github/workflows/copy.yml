@@ -1,29 +1,29 @@
-name: Clone Public Repository Workflow
+# name: Clone Public Repository Workflow
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+# # Controls when the workflow will run
+# on:
+#   # Triggers the workflow on push or pull request events but only for the "main" branch
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
 
-jobs:
+# jobs:
     
-  job-public-repo-ubuntu:
-    runs-on: ubuntu-latest
-    steps:
+#   job-public-repo-ubuntu:
+#     runs-on: ubuntu-latest
+#     steps:
       
-      - name: Clone rajat71g/idl-test PUBLIC repository
-        uses: GuillaumeFalourd/clone-github-repo-action@v2
-        with:
-          owner: 'rajat71g'
-          repository: 'idl-test'
+#       - name: Clone rajat71g/idl-test PUBLIC repository
+#         uses: GuillaumeFalourd/clone-github-repo-action@v2
+#         with:
+#           owner: 'rajat71g'
+#           repository: 'idl-test'
       
-      - name: Access cloned repository content
-        run: |
-          echo "ROOT"
-          ls -la
-          echo "CLONED REPO"
-          cd idl-test
-          ls -la
+#       - name: Access cloned repository content
+#         run: |
+#           echo "ROOT"
+#           ls -la
+#           echo "CLONED REPO"
+#           cd idl-test
+#           ls -la
