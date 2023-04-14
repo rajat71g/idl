@@ -13,6 +13,8 @@ jobs:
   job-public-repo-ubuntu:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout the code
+        uses: actions/checkout@v3
       
       - name: Clone Rajat71g/idl-copy PRIVATE repository
         uses: GuillaumeFalourd/clone-github-repo-action@v2
