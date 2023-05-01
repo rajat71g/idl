@@ -33,9 +33,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Clone GuillaumeFalourd/formulas-training PRIVATE repository
+      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
         uses: GuillaumeFalourd/clone-github-repo-action@v2
         with:
           owner: 'rajat71g'
           repository: 'idl'
-          access-token: ${{ secrets.GITHUB_TOKEN }}
