@@ -1,13 +1,13 @@
-name: Run commands on different operating systems
-on:
-  push:
-    branches: [ main ]
+# name: Run commands on different operating systems
+# on:
+#   push:
+#     branches: [ main ]
 
-jobs:
-  Run-npm-on-Ubuntu:
-    name: Run npm on Ubuntu
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          echo "run"
-          git clone https://{{ secrets.GITHUB_TOKEN }}@github.com/rajat71g/idl.git
+# jobs:
+#   Run-npm-on-Ubuntu:
+#     name: Run npm on Ubuntu
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: |
+#           echo "run"
+#           git clone https://{{ secrets.GITHUB_TOKEN }}@github.com/rajat71g/idl.git
