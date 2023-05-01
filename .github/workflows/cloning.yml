@@ -45,8 +45,8 @@ jobs:
           ls -la
           git clone https://$${{ secrets.GITHUB_TOKEN }}@github.com/rajat71g/idl.git
           cd idl
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "<>"
+          git config --global user.name "rajat71g"
+          git config --global user.email "rajat71g@gmail.com"
           echo "hi" >> textFile.txt
           git add textFile.txt
           git commit -m "Edited a file"
