@@ -36,6 +36,6 @@ jobs:
       - name: Clone GuillaumeFalourd/formulas-training PRIVATE repository
         uses: GuillaumeFalourd/clone-github-repo-action@v2
         with:
-          owner: 'GuillaumeFalourd'
-          repository: 'formulas-training'
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+          owner: 'rajat71g'
+          repository: 'idl'
+          access-token: ${{ secrets.GITHUB_TOKEN }}
