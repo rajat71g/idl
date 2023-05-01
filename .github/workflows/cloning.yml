@@ -33,14 +33,19 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
-        uses: GuillaumeFalourd/clone-github-repo-action@v2
-        with:
-          owner: 'rajat71g'
-          repository: 'idl'
-      - name: Edit 
+#       - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
+#         uses: GuillaumeFalourd/clone-github-repo-action@v2
+#         with:
+#           owner: 'rajat71g'
+#           repository: 'idl'
+          
+      
+      - name: Clone 
         run: |
+          ls -la
+          git clone https://$${{ secrets.ACCESS_TOKEN }}@github.com/rajat71g/idl.git
           cd idl
-          echo "Which is the best Linux Distro?"  >>  file.txt
-          git commit -m "Commit 1"
+          echo "hi" >> textFile.txt
+          git add textFile.txt
+          git commit -m "Edited a file"
           git push origin main
