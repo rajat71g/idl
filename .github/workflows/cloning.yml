@@ -38,3 +38,9 @@ jobs:
         with:
           owner: 'rajat71g'
           repository: 'idl'
+      - name: Edit 
+        run: |
+          cd idl
+          echo "Which is the best Linux Distro?"  >>  file.txt
+          git commit -m "Commit 1"
+          git push origin main
